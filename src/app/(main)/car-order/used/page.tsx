@@ -8,16 +8,11 @@ export default async function UsedCarOrderPage() {
   await ConvertAPIImagesToBase64(data?.ads);
   const postedData = { page_number: 1, page_size: 200 };
 
-  const brandModel = await GetStaticDatasNotSSRAPI({
-    endPoint: "/BrandModelType/Get/All",
-    data: postedData,
-    method: "post",
-  });
+  // const brandModel = await GetStaticDatasNotSSRAPI({
+  //   endPoint: "/BrandModelType/Get/All",
+  //   data: postedData,
+  //   method: "post",
+  // });
 
-  return (
-    <UsedCarOrder
-      usedData={data?.ads ?? []}
-      brandModel={brandModel?.brandModelTypes ?? []}
-    />
-  );
+  return <UsedCarOrder usedData={data?.ads ?? []} brandModel={[]} />;
 }
