@@ -11,7 +11,7 @@ const UsedCarOrder = ({ usedData, brandModel }: any) => {
       <div className="my-4">
         <NormalVipPurchase brandModel={brandModel} />
       </div>
-      {/* <SliderLatestProduct link="/used" data={usedData} /> */}
+      <SliderLatestProduct link="/used" data={usedData} />
       <SliderUsedCarOrder />
       <div className="mt-20">
         <BannerCarUsedCarExchange />
